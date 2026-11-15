@@ -1,0 +1,43 @@
+#list
+###
+GET http://127.0.0.1:8000/book/
+Accept: application/json
+
+#insert
+###
+POST http://127.0.0.1:8000/book/
+Content-Type: application/json
+
+{
+    "title":"Goat Life",
+    "author":"Bennyamin",
+    "pages":200,
+    "price":150.00,
+    "genre":"tragedy"
+}
+
+#retrieve
+###
+GET http://127.0.0.1:8000/book/1/
+Accept: application/json
+
+#update
+###
+PUT http://127.0.0.1:8000/book/1/
+Content-Type: application/json
+
+{
+    
+    "id": 1,
+    "title": "Lost Symbol",
+    "author": "Dan Brown",
+    "pages": 200,
+    "price": "150.00",
+    "genre": "Crime Thriller"
+  
+}
+
+#delete
+###
+DELETE http://127.0.0.1:8000/book/1/
+Accept: application/json
